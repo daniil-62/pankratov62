@@ -12,7 +12,7 @@
 
 body{
 font-family:'Montserrat',sans-serif;
-background:#0f0c03;
+background:radial-gradient(circle at center,#2a1f07 0%,#000 70%);
 color:#fff;
 overflow-x:hidden;
 }
@@ -34,12 +34,12 @@ z-index:1000;
 font-weight:800;
 font-size:22px;
 color:#d4af37;
-cursor:pointer;
+text-decoration:none;
 transition:0.3s;
 }
 
 .logo:hover{
-text-shadow:0 0 15px rgba(212,175,55,0.8);
+text-shadow:0 0 12px #d4af37;
 }
 
 nav{
@@ -68,53 +68,79 @@ padding:100px 20px 60px;
 .title h1{
 font-size:48px;
 color:#d4af37;
-text-shadow:0 0 20px rgba(212,175,55,0.5);
+letter-spacing:2px;
 }
 
-/* GOLD BACKGROUND */
+/* REVIEWS GRID */
 
-.section{
-position:relative;
-padding:80px 20px 140px;
-}
-
-.section::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:radial-gradient(circle at center,
-rgba(212,175,55,0.15) 0%,
-rgba(15,12,3,0.95) 70%);
-z-index:-1;
-}
-
-/* GLASS PANEL */
-
-.glass{
-max-width:1000px;
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+padding:0 80px 120px;
+max-width:1400px;
 margin:0 auto;
-padding:40px;
-border-radius:25px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(25px);
--webkit-backdrop-filter:blur(25px);
+}
+
+/* GLASS CARD */
+
+.card{
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
 border:1px solid rgba(212,175,55,0.3);
-box-shadow:
-0 0 40px rgba(212,175,55,0.15),
-0 20px 60px rgba(0,0,0,0.6);
-animation:fadeUp 1s ease forwards;
+border-radius:20px;
+padding:30px;
+transition:0.4s;
 opacity:0;
 transform:translateY(40px);
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
 }
 
-@keyframes fadeUp{
-to{
+.card.visible{
 opacity:1;
 transform:translateY(0);
 }
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(212,175,55,0.3);
+}
+
+/* CARD CONTENT */
+
+.card-top{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:15px;
+}
+
+.avatar{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#d4af37;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+color:#000;
+}
+
+.name{
+font-weight:700;
+font-size:18px;
+}
+
+.stars{
+color:#d4af37;
+margin:10px 0;
+}
+
+.text{
+opacity:0.85;
+line-height:1.5;
+font-size:15px;
 }
 
 /* FOOTER */
@@ -124,7 +150,6 @@ background:#000;
 padding:60px;
 text-align:center;
 font-size:14px;
-color:#ccc;
 }
 </style>
 </head>
@@ -132,9 +157,7 @@ color:#ccc;
 <body>
 
 <header>
-<div class="logo" onclick="window.location.href='index.html'">
-Панкратов Мебель
-</div>
+<a href="index.html" class="logo">Панкратов Мебель</a>
 <nav>
 <a href="index.html">Главная</a>
 <a href="works.html">Работы</a>
@@ -149,12 +172,63 @@ color:#ccc;
 <h1>Отзывы наших клиентов</h1>
 </div>
 
-<section class="section">
-<div class="glass">
+<section class="reviews">
 
-<div id="vk_groups"></div>
-
+<div class="card">
+<div class="card-top">
+<div class="avatar">И</div>
+<div class="name">Ирина К.</div>
 </div>
+<div class="stars">★★★★★</div>
+<div class="text">
+Заказывали кухню под ключ. Всё сделали идеально — от замера до установки. Качество на высшем уровне!
+</div>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="avatar">А</div>
+<div class="name">Алексей М.</div>
+</div>
+<div class="stars">★★★★★</div>
+<div class="text">
+Очень доволен работой. Реально премиальный уровень исполнения и подход к деталям.
+</div>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="avatar">Е</div>
+<div class="name">Екатерина С.</div>
+</div>
+<div class="stars">★★★★★</div>
+<div class="text">
+Проектировали шкаф и кухню. Всё продумано до мелочей. Видно, что ребята знают своё дело.
+</div>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="avatar">Д</div>
+<div class="name">Дмитрий В.</div>
+</div>
+<div class="stars">★★★★★</div>
+<div class="text">
+Отдельное спасибо за сроки — сделали быстрее, чем обещали. Рекомендую!
+</div>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="avatar">О</div>
+<div class="name">Ольга Н.</div>
+</div>
+<div class="stars">★★★★★</div>
+<div class="text">
+Кухня получилась даже лучше, чем ожидали. Современный стиль, качество топ.
+</div>
+</div>
+
 </section>
 
 <footer>
@@ -163,19 +237,21 @@ color:#ccc;
 Телефон: +7 (910) 906-95-95
 </footer>
 
-<script src="https://vk.com/js/api/openapi.js?169"></script>
 <script>
-VK.init({
-apiId: 0,
-onlyWidgets: true
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
 });
 
-VK.Widgets.Group("vk_groups", {
-mode: 4,
-width: "100%",
-height: "600"
-}, -215879683);
+document.querySelectorAll(".card").forEach(card=>{
+observer.observe(card);
+});
 </script>
 
 </body>
 </html>
+
+
