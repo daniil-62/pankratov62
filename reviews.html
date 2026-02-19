@@ -9,7 +9,7 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:linear-gradient(180deg,#0a0a0a,#1a1200);
+    background:linear-gradient(180deg,#000,#1a1200);
     color:white;
 }
 
@@ -40,37 +40,46 @@ nav a:hover{
 h1{
     text-align:center;
     color:#f2b705;
-    margin:40px 0;
+    margin:50px 0;
 }
 
 .reviews{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:50px;
     padding:40px 80px;
 }
 
 .card{
     background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:20px;
+    padding:30px;
+    border-radius:25px;
     backdrop-filter:blur(10px);
-    box-shadow:0 0 20px rgba(255,183,0,0.2);
+    box-shadow:0 0 25px rgba(255,183,0,0.2);
     transition:0.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.03);
-    box-shadow:0 0 35px rgba(255,183,0,0.6);
+    transform:translateY(-12px);
+    box-shadow:0 0 40px rgba(255,183,0,0.6);
 }
 
 .avatar{
-    width:60px;
-    height:60px;
+    width:65px;
+    height:65px;
     border-radius:50%;
     object-fit:cover;
-    margin-bottom:10px;
     border:2px solid #f2b705;
+    margin-bottom:10px;
+}
+
+.avatar-empty{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#111;
+    border:2px solid #f2b705;
+    margin-bottom:10px;
 }
 
 .name{
@@ -83,22 +92,22 @@ h1{
     margin-bottom:10px;
 }
 
-.card img.review-photo{
+.review-photo{
     width:100%;
-    border-radius:15px;
+    border-radius:18px;
     margin-top:15px;
     transition:0.4s;
 }
 
-.card img.review-photo:hover{
+.review-photo:hover{
     transform:scale(1.05);
 }
 
 footer{
     text-align:center;
-    padding:20px;
-    margin-top:40px;
+    padding:25px;
     background:#000;
+    margin-top:40px;
     font-size:14px;
 }
 </style>
@@ -107,63 +116,63 @@ footer{
 <body>
 
 <header>
-    <div class="logo">Панкратов Мебель</div>
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="works.html">Работы</a>
-        <a href="video.html">Видео</a>
-        <a href="reviews.html">Отзывы</a>
-        <a href="#">Контакты</a>
-    </nav>
+<div class="logo">Панкратов Мебель</div>
+<nav>
+<a href="index.html">Главная</a>
+<a href="works.html">Работы</a>
+<a href="video.html">Видео</a>
+<a href="reviews.html">Отзывы</a>
+<a href="#">Контакты</a>
+</nav>
 </header>
 
 <h1>Отзывы наших клиентов</h1>
 
 <div class="reviews">
 
-    <!-- Дмитрий -->
-    <div class="card">
-        <img src="review2-photo.webp" class="avatar">
-        <div class="name">Дмитрий</div>
-        <div class="stars">★★★★★</div>
-        <div>
-        Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, после чего поняли, что остальную мебель будем заказывать только у него! Отличное качество как самой мебели, так и сборки. Всем рекомендуем Панкратов мебель 👍
-        </div>
-        <img src="review1-photo.webp" class="review-photo">
-    </div>
+<!-- Дмитрий -->
+<div class="card">
+<img src="review1-avatar.webp" class="avatar">
+<div class="name">Дмитрий</div>
+<div class="stars">★★★★★</div>
+<div>
+Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, после чего поняли, что остальную мебель будем заказывать только у него! Отличное качество как самой мебели, так и сборки. Всем рекомендуем Панкратов мебель 👍
+</div>
+<img src="review1-photo.webp" class="review-photo">
+</div>
 
-    <!-- Татьяна -->
-    <div class="card">
-        <img src="review1-avatar.webp" class="avatar">
-        <div class="name">Татьяна</div>
-        <div class="stars">★★★★★</div>
-        <div>
-        Наконец-то дошли руки написать отзыв о нашей новой детской. Отличное качество и прекрасная цена. Детскую установили в срок — дочь в восторге!
-        </div>
-        <img src="review2-photo.webp" class="review-photo">
-    </div>
+<!-- Татьяна (аватарка и фото поменяны местами) -->
+<div class="card">
+<img src="review2-photo.webp" class="avatar">
+<div class="name">Татьяна</div>
+<div class="stars">★★★★★</div>
+<div>
+Наконец-то дошли руки написать отзыв о нашей новой детской. Отличное качество и прекрасная цена. Детскую установили в срок — дочь в восторге!
+</div>
+<img src="review2-avatar.webp" class="review-photo">
+</div>
 
-    <!-- Анжелика -->
-    <div class="card">
-        <img src="review2-avatar.webp" class="avatar">
-        <div class="name">Анжелика</div>
-        <div class="stars">★★★★★</div>
-        <div>
-        Доверить преображение нашей кухни решили компании Олега Панкратова и не ошиблись! Всё красиво и ровно ❤️ Спасибо огромное за вашу работу!
-        </div>
-        <img src="review3-photo.webp" class="review-photo">
-    </div>
+<!-- Анжелика -->
+<div class="card">
+<img src="review3-avatar.webp" class="avatar">
+<div class="name">Анжелика</div>
+<div class="stars">★★★★★</div>
+<div>
+Доверить преображение нашей кухни решили компании Олега Панкратова и не ошиблись! Всё красиво и ровно ❤️ Спасибо огромное за вашу работу!
+</div>
+<img src="review3-photo.webp" class="review-photo">
+</div>
 
-    <!-- Артем -->
-    <div class="card">
-        <img src="review3-avatar.webp" class="avatar">
-        <div class="name">Артем</div>
-        <div class="stars">★★★★★</div>
-        <div>
-        Спасибо за качественную мебель на кухню. Стильный дизайн, мягкие тона, всё прошло гладко. Благодарю Панкратова Олега и всю компанию!
-        </div>
-        <img src="review4-photo.webp" class="review-photo">
-    </div>
+<!-- Артем (без аватарки) -->
+<div class="card">
+<div class="avatar-empty"></div>
+<div class="name">Артем</div>
+<div class="stars">★★★★★</div>
+<div>
+Спасибо за качественную мебель на кухню. Стильный дизайн, мягкие тона, всё прошло гладко. Благодарю Панкратова Олега и всю компанию!
+</div>
+<img src="review4-photo.webp" class="review-photo">
+</div>
 
 </div>
 
