@@ -1,85 +1,159 @@
-<section class="reviews-section">
-  <h2>Отзывы наших клиентов</h2>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Отзывы | Панкратов Мебель</title>
 
-  <div class="reviews-grid">
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0d0d0d,#1a1408);
+    color:white;
+}
 
-    <!-- Дмитрий -->
-    <div class="review-card">
-      <div class="review-header">
+h2{
+    text-align:center;
+    margin:60px 0;
+    font-size:32px;
+    color:#d4af37;
+}
+
+.reviews-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto 80px auto;
+    padding:0 20px;
+}
+
+.review-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
+
+.review-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.placeholder{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#111;
+}
+
+.stars{
+    color:gold;
+}
+
+.review-photo{
+    width:100%;
+    margin-top:15px;
+    border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Отзывы наших клиентов</h2>
+
+<div class="reviews-grid">
+
+<!-- Дмитрий -->
+<div class="review-card">
+    <div class="review-header">
         <img src="review1-avatar.webp" class="avatar">
         <div>
-          <h3>Дмитрий</h3>
-          <div class="stars">★★★★★</div>
+            <b>Дмитрий</b>
+            <div class="stars">★★★★★</div>
         </div>
-      </div>
-
-      <p>
-        Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, 
-        после чего поняли, что остальную мебель будем заказывать только у него! 
-        Отличное качество как самой мебели, так и сборки. Всем рекомендуем 
-        Панкратов мебель 👍
-      </p>
-
-      <img src="review1-photo.webp" class="review-photo">
     </div>
 
+    <p>
+    Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, 
+    после чего поняли, что остальную мебель будем заказывать только у него! 
+    Отличное качество как самой мебели, так и сборки. 
+    Всем рекомендуем Панкратов мебель 👍
+    </p>
 
-    <!-- Татьяна -->
-    <div class="review-card">
-      <div class="review-header">
-        <div class="avatar placeholder"></div>
+    <img src="review1-photo.webp" class="review-photo">
+</div>
+
+
+<!-- Татьяна -->
+<div class="review-card">
+    <div class="review-header">
+        <div class="placeholder"></div>
         <div>
-          <h3>Татьяна</h3>
-          <div class="stars">★★★★★</div>
+            <b>Татьяна</b>
+            <div class="stars">★★★★★</div>
         </div>
-      </div>
-
-      <p>
-        Наконец-то дошли руки написать отзыв о нашей новой детской...
-        Отличное качество и прекрасная цена. Детскую установили в срок — дочь в восторге!
-      </p>
-
-      <img src="review2-photo.webp" class="review-photo">
     </div>
 
+    <p>
+    Наконец-то дошли руки написать отзыв о нашей новой детской...
+    Отличное качество и прекрасная цена. Детскую установили в срок —
+    дочь в восторге!
+    </p>
 
-    <!-- Анжелика -->
-    <div class="review-card">
-      <div class="review-header">
+    <img src="review2-photo.webp" class="review-photo">
+</div>
+
+
+<!-- Анжелика -->
+<div class="review-card">
+    <div class="review-header">
         <img src="review3-avatar.webp" class="avatar">
         <div>
-          <h3>Анжелика</h3>
-          <div class="stars">★★★★★</div>
+            <b>Анжелика</b>
+            <div class="stars">★★★★★</div>
         </div>
-      </div>
-
-      <p>
-        Доверить преображение нашей кухни решили компании Олега Панкратова 
-        и не ошиблись! Слаженная команда, всё красиво и ровно ❤️
-        Спасибо огромное за вашу работу!
-      </p>
-
-      <img src="review3-photo.webp" class="review-photo">
     </div>
 
+    <p>
+    Доверить преображение кухни решили компании Олега Панкратова 
+    и не ошиблись! Всё красиво и ровно ❤️ Спасибо огромное за вашу работу!
+    </p>
 
-    <!-- Артем -->
-    <div class="review-card">
-      <div class="review-header">
-        <div class="avatar placeholder"></div>
+    <img src="review3-photo.webp" class="review-photo">
+</div>
+
+
+<!-- Артем -->
+<div class="review-card">
+    <div class="review-header">
+        <div class="placeholder"></div>
         <div>
-          <h3>Артем</h3>
-          <div class="stars">★★★★★</div>
+            <b>Артем</b>
+            <div class="stars">★★★★★</div>
         </div>
-      </div>
-
-      <p>
-        Спасибо за качественную мебель на кухню. Стильный дизайн,
-        мягкие тона, всё прошло гладко. Благодарю Олега и всю компанию!
-      </p>
-
-      <img src="review4-photo.webp" class="review-photo">
     </div>
 
-  </div>
-</section>
+    <p>
+    Спасибо за качественную мебель на кухню. Стильный дизайн,
+    мягкие тона, всё прошло гладко. Благодарю всю компанию!
+    </p>
+
+    <img src="review4-photo.webp" class="review-photo">
+</div>
+
+</div>
+
+</body>
+</html>
