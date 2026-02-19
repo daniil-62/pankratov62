@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Отзывы | Панкратов Мебель</title>
+<title>Отзывы клиентов | Панкратов Мебель</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -12,9 +12,8 @@
 
 body{
 font-family:'Montserrat',sans-serif;
-background:radial-gradient(circle at center,#2a1f07 0%,#000 70%);
+background:#1a1405;
 color:#fff;
-overflow-x:hidden;
 }
 
 /* HEADER */
@@ -25,9 +24,6 @@ justify-content:space-between;
 align-items:center;
 padding:25px 60px;
 background:#000;
-position:sticky;
-top:0;
-z-index:1000;
 }
 
 .logo{
@@ -39,7 +35,7 @@ transition:0.3s;
 }
 
 .logo:hover{
-text-shadow:0 0 12px #d4af37;
+text-shadow:0 0 10px #d4af37;
 }
 
 nav{
@@ -62,85 +58,85 @@ color:#d4af37;
 
 .title{
 text-align:center;
-padding:100px 20px 60px;
+padding:80px 20px 60px;
 }
 
 .title h1{
 font-size:48px;
 color:#d4af37;
-letter-spacing:2px;
 }
 
 /* REVIEWS GRID */
 
 .reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
 padding:0 80px 120px;
-max-width:1400px;
-margin:0 auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
 }
 
-/* GLASS CARD */
+/* REVIEW CARD */
 
-.card{
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(18px);
+.review-card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
 border:1px solid rgba(212,175,55,0.3);
 border-radius:20px;
 padding:30px;
-transition:0.4s;
-opacity:0;
-transform:translateY(40px);
 box-shadow:0 20px 50px rgba(0,0,0,0.6);
+transition:0.4s;
 }
 
-.card.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-.card:hover{
+.review-card:hover{
 transform:translateY(-10px);
-box-shadow:0 25px 60px rgba(212,175,55,0.3);
+box-shadow:0 25px 60px rgba(212,175,55,0.2);
 }
 
-/* CARD CONTENT */
-
-.card-top{
+.review-header{
 display:flex;
 align-items:center;
 gap:15px;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
-.avatar{
-width:55px;
-height:55px;
+.review-header img{
+width:60px;
+height:60px;
 border-radius:50%;
-background:#d4af37;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:700;
-color:#000;
+object-fit:cover;
+border:2px solid #d4af37;
 }
 
-.name{
+.review-name{
 font-weight:700;
 font-size:18px;
 }
 
 .stars{
-color:#d4af37;
-margin:10px 0;
+color:#ffd700;
+margin-top:5px;
 }
 
-.text{
-opacity:0.85;
-line-height:1.5;
-font-size:15px;
+.review-text{
+margin-top:15px;
+line-height:1.6;
+opacity:0.9;
+}
+
+.review-photo{
+margin-top:20px;
+border-radius:15px;
+overflow:hidden;
+}
+
+.review-photo img{
+width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+
+.review-photo img:hover{
+transform:scale(1.05);
 }
 
 /* FOOTER */
@@ -174,59 +170,29 @@ font-size:14px;
 
 <section class="reviews">
 
-<div class="card">
-<div class="card-top">
-<div class="avatar">И</div>
-<div class="name">Ирина К.</div>
-</div>
+<div class="review-card">
+
+<div class="review-header">
+<img src="avatar1.jpg" alt="">
+<div>
+<div class="review-name">Екатерина</div>
 <div class="stars">★★★★★</div>
-<div class="text">
-Заказывали кухню под ключ. Всё сделали идеально — от замера до установки. Качество на высшем уровне!
 </div>
 </div>
 
-<div class="card">
-<div class="card-top">
-<div class="avatar">А</div>
-<div class="name">Алексей М.</div>
-</div>
-<div class="stars">★★★★★</div>
-<div class="text">
-Очень доволен работой. Реально премиальный уровень исполнения и подход к деталям.
-</div>
+<div class="review-text">
+Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, после чего поняли, что остальную мебель будем делать только у него! 
+Завершающим этапом стало обустройство детской спальни! 
+Как всегда отличное качество как самой мебели, так и сборки 🙌  
+Всем рекомендуем Панкратов мебель 👍  
+Замечательные люди делают замечательные вещи 🔥  
+Семёну респект!
 </div>
 
-<div class="card">
-<div class="card-top">
-<div class="avatar">Е</div>
-<div class="name">Екатерина С.</div>
-</div>
-<div class="stars">★★★★★</div>
-<div class="text">
-Проектировали шкаф и кухню. Всё продумано до мелочей. Видно, что ребята знают своё дело.
-</div>
+<div class="review-photo">
+<img src="review1.jpg" alt="">
 </div>
 
-<div class="card">
-<div class="card-top">
-<div class="avatar">Д</div>
-<div class="name">Дмитрий В.</div>
-</div>
-<div class="stars">★★★★★</div>
-<div class="text">
-Отдельное спасибо за сроки — сделали быстрее, чем обещали. Рекомендую!
-</div>
-</div>
-
-<div class="card">
-<div class="card-top">
-<div class="avatar">О</div>
-<div class="name">Ольга Н.</div>
-</div>
-<div class="stars">★★★★★</div>
-<div class="text">
-Кухня получилась даже лучше, чем ожидали. Современный стиль, качество топ.
-</div>
 </div>
 
 </section>
@@ -237,21 +203,8 @@ font-size:14px;
 Телефон: +7 (910) 906-95-95
 </footer>
 
-<script>
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("visible");
-}
-});
-});
-
-document.querySelectorAll(".card").forEach(card=>{
-observer.observe(card);
-});
-</script>
-
 </body>
 </html>
+
 
 
