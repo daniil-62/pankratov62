@@ -7,157 +7,127 @@
 
 <style>
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(180deg,#000000,#1a1200);
-color:white;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:black;
-}
-
-header a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-}
-
-header a:hover{
-color:#ffb300;
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg,#000 0%,#1a1200 100%);
+    color:#fff;
 }
 
 h1{
-text-align:center;
-margin:60px 0;
-color:#ffb300;
+    text-align:center;
+    padding:60px 20px 40px;
+    color:#ffb400;
+    font-size:36px;
 }
 
 .container{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
-padding:0 60px 100px;
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
 }
 
 .card{
-background:#1a1200;
-padding:25px;
-border-radius:20px;
-box-shadow:0 0 25px rgba(255,179,0,0.25);
-transition:0.4s;
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(255,180,0,0.2);
+    transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 35px rgba(255,179,0,0.6);
-}
-
-.avatar{
-width:70px;
-height:70px;
-border-radius:50%;
-object-fit:cover;
-border:2px solid #ffb300;
+    transform:translateY(-10px);
+    box-shadow:0 0 40px rgba(255,180,0,0.5);
 }
 
 .name{
-margin-top:10px;
-font-weight:bold;
-font-size:18px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 
 .stars{
-color:#ffb300;
-margin:5px 0 15px;
+    color:#ffb400;
+    margin-bottom:15px;
 }
 
-.review-img{
-width:100%;
-border-radius:15px;
-margin-top:15px;
+.text{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:20px;
 }
 
-@media(max-width:1200px){
-.container{
-grid-template-columns:repeat(2,1fr);
-}
+.card img{
+    width:100%;
+    border-radius:15px;
+    transition:0.4s;
 }
 
-@media(max-width:700px){
-.container{
-grid-template-columns:1fr;
+.card img:hover{
+    transform:scale(1.05);
 }
+footer{
+    text-align:center;
+    padding:40px;
+    margin-top:60px;
+    background:#000;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div style="color:#ffb300;font-weight:bold;">Панкратов Мебель</div>
-<div>
-<a href="index.html">Главная</a>
-<a href="works.html">Работы</a>
-<a href="video.html">Видео</a>
-<a href="reviews.html">Отзывы</a>
-<a href="contacts.html">Контакты</a>
-</div>
-</header>
-
 <h1>Отзывы наших клиентов</h1>
 
 <div class="container">
 
-<!-- Дмитрий -->
 <div class="card">
-<img src="review2-avatar.webp" class="avatar">
 <div class="name">Дмитрий</div>
 <div class="stars">★★★★★</div>
-<div>
-Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, после чего поняли, что остальную мебель будем заказывать только у него! Отличное качество как самой мебели, так и сборки. Всем рекомендуем Панкратов мебель 👍
+<div class="text">
+Всю мебель в квартиру заказывали у Олега! Отличное качество как самой мебели, так и сборки.
+Всем рекомендуем Панкратов мебель 👍
 </div>
-<img src="review1-photo.webp" class="review-img">
+<img src="review1-photo.jpg" alt="">
 </div>
 
-<!-- Татьяна -->
 <div class="card">
-<img src="review1-avatar.webp" class="avatar">
 <div class="name">Татьяна</div>
 <div class="stars">★★★★★</div>
-<div>
-Наконец-то дошли руки написать отзыв о нашей новой детской. Отличное качество и прекрасная цена. Детскую установили в срок — дочь в восторге!
+<div class="text">
+Наконец-то дошли руки написать отзыв о нашей новой детской.
+Детскую привезли и установили в срок — дочь в восторге!
 </div>
-<img src="review2-photo.webp" class="review-img">
+<img src="review2-photo.jpg" alt="">
 </div>
 
-<!-- Анжелика -->
 <div class="card">
-<img src="review3-avatar.webp" class="avatar">
 <div class="name">Анжелика</div>
 <div class="stars">★★★★★</div>
-<div>
-Доверить преображение нашей кухни решили компании Олега Панкратова и не ошиблись! Всё красиво и ровно ❤️ Спасибо огромное за вашу работу!
+<div class="text">
+Доверили кухню компании Олега Панкратова и не ошиблись.
+Всё красиво, аккуратно и качественно ❤️
 </div>
-<img src="review3-photo.webp" class="review-img">
+<img src="review3-photo.jpg" alt="">
 </div>
 
-<!-- Артем -->
 <div class="card">
-<img src="review4-avatar.webp" class="avatar">
 <div class="name">Артем</div>
 <div class="stars">★★★★★</div>
-<div>
-Спасибо за качественную мебель на кухню. Стильный дизайн, мягкие тона, всё прошло гладко. Благодарю Панкратова Олега и всю компанию!
+<div class="text">
+Спасибо за качественную мебель на кухню.
+Стильный современный дизайн и отличная сборка.
 </div>
-<img src="review4-photo.webp" class="review-img">
+<img src="review4-photo.jpg" alt="">
 </div>
 
 </div>
+
+<footer>
+© 2026 Панкратов Мебель | Рязань | +7 (910) 906-95-95
+</footer>
 
 </body>
 </html>
