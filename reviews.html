@@ -26,16 +26,16 @@ padding:25px 60px;
 background:#000;
 }
 
-.logo a{
-text-decoration:none;
-color:#d4af37;
+.logo{
 font-weight:800;
 font-size:22px;
+color:#d4af37;
+text-decoration:none;
 transition:0.3s;
 }
 
-.logo a:hover{
-text-shadow:0 0 15px #d4af37;
+.logo:hover{
+color:#fff;
 }
 
 nav{
@@ -69,24 +69,27 @@ color:#d4af37;
 /* REVIEWS */
 
 .reviews{
-padding:0 80px 120px;
+max-width:1300px;
+margin:0 auto 120px;
 display:grid;
+grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
 gap:40px;
+padding:0 40px;
 }
 
-.review-card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-border:1px solid rgba(212,175,55,0.3);
+.card{
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.08);
 border-radius:25px;
-padding:40px;
+padding:35px;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
 transition:0.4s;
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
 }
 
-.review-card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 80px rgba(212,175,55,0.2);
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 80px rgba(0,0,0,0.7);
 }
 
 .review-header{
@@ -100,54 +103,37 @@ margin-bottom:20px;
 width:70px;
 height:70px;
 border-radius:50%;
-overflow:hidden;
-background:#000;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:700;
-font-size:24px;
-color:#d4af37;
+object-fit:cover;
 }
 
-.avatar img{
-width:100%;
-height:100%;
-object-fit:cover;
+.avatar-empty{
+width:70px;
+height:70px;
+border-radius:50%;
+background:#111;
 }
 
 .name{
 font-weight:700;
-font-size:20px;
+font-size:18px;
 }
 
 .stars{
 color:#d4af37;
+font-size:18px;
 margin-top:5px;
 }
 
-.review-text{
+.text{
 line-height:1.6;
-margin-top:15px;
-opacity:0.95;
+opacity:0.9;
+margin-bottom:20px;
 }
 
-.review-photos{
-display:flex;
-gap:15px;
-margin-top:25px;
-flex-wrap:wrap;
-}
-
-.review-photos img{
-width:200px;
+.review-photo{
+width:100%;
 border-radius:15px;
-transition:0.3s;
-cursor:pointer;
-}
-
-.review-photos img:hover{
-transform:scale(1.05);
+margin-top:10px;
 }
 
 /* FOOTER */
@@ -157,6 +143,7 @@ background:#000;
 padding:60px;
 text-align:center;
 font-size:14px;
+margin-top:80px;
 }
 </style>
 </head>
@@ -164,14 +151,12 @@ font-size:14px;
 <body>
 
 <header>
-<div class="logo">
-<a href="index.html">Панкратов Мебель</a>
-</div>
+<a href="index.html" class="logo">Панкратов Мебель</a>
 <nav>
 <a href="index.html">Главная</a>
 <a href="works.html">Работы</a>
 <a href="video.html">Видео</a>
-<a href="reviews.html">Отзывы</a>
+<a href="reviews.html" style="color:#d4af37;">Отзывы</a>
 <a href="about.html">О нас</a>
 <a href="contacts.html">Контакты</a>
 </nav>
@@ -184,88 +169,63 @@ font-size:14px;
 <section class="reviews">
 
 <!-- Дмитрий -->
-
-<div class="review-card">
+<div class="card">
 <div class="review-header">
-<div class="avatar">
-<img src="kitchen1.jpg">
-</div>
+<img src="review1-avatar.jpg" class="avatar">
 <div>
 <div class="name">Дмитрий</div>
 <div class="stars">★★★★★</div>
 </div>
 </div>
-
-<div class="review-text">
-Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, после чего поняли, что остальную мебель будем заказывать только у него! Завершающим этапом стало обустройство детской спальни! Как всегда отличное качество как самой мебели, так и сборки. Всем рекомендуем Панкратов мебель 👍 Семёну респект!
+<div class="text">
+Всю мебель в квартиру заказывали у Олега! Сначала заказали кухню, после чего поняли, что остальную мебель будем заказывать только у него. Отличное качество как самой мебели, так и сборки. Всем рекомендуем Панкратов мебель 👍
 </div>
-
-<div class="review-photos">
-<img src="kitchen2.jpg">
-<img src="kitchen3.jpg">
-</div>
+<img src="review1-photo.jpg" class="review-photo">
 </div>
 
 <!-- Татьяна -->
-
-<div class="review-card">
+<div class="card">
 <div class="review-header">
-<div class="avatar">Т</div>
+<div class="avatar-empty"></div>
 <div>
 <div class="name">Татьяна</div>
 <div class="stars">★★★★★</div>
 </div>
 </div>
-
-<div class="review-text">
-Наконец-то дошли руки написать отзыв о нашей новой детской. Это вторая покупка у «Панкратов мебель». Качество отличное, всё установили в срок. Дочь в восторге! Теперь планируем кабинет мужа.
+<div class="text">
+Наконец-то дошли руки написать отзыв о нашей новой детской. Обойдя кучу салонов, вернулись в «Панкратов мебель». Отличное качество и прекрасная цена. Детскую установили в срок — дочь в восторге!
 </div>
-
-<div class="review-photos">
-<img src="kitchen4.jpg">
-</div>
+<img src="review2-photo.jpg" class="review-photo">
 </div>
 
 <!-- Анжелика -->
-
-<div class="review-card">
+<div class="card">
 <div class="review-header">
-<div class="avatar">
-<img src="kitchen5.jpg">
-</div>
+<img src="review3-avatar.jpg" class="avatar">
 <div>
 <div class="name">Анжелика</div>
 <div class="stars">★★★★★</div>
 </div>
 </div>
-
-<div class="review-text">
-Доверить преображение нашей маленькой кухни мы решили компании Олега Панкратова и не ошиблись! Приятная команда, всегда на связи, учли все нюансы. Спасибо огромное!
+<div class="text">
+Доверить преображение нашей кухни решили компании Олега Панкратова и не ошиблись! Слаженная команда, всё красиво и ровно ❤️ Спасибо огромное за вашу работу!
 </div>
-
-<div class="review-photos">
-<img src="kitchen6.jpg">
-</div>
+<img src="review3-photo.jpg" class="review-photo">
 </div>
 
 <!-- Артем -->
-
-<div class="review-card">
+<div class="card">
 <div class="review-header">
-<div class="avatar">А</div>
+<div class="avatar-empty"></div>
 <div>
-<div class="name">Артём</div>
+<div class="name">Артем</div>
 <div class="stars">★★★★★</div>
 </div>
 </div>
-
-<div class="review-text">
-Спасибо за качественную мебель на кухню. Стильный дизайн, приятные тона, всё прошло гладко. Благодарю всю компанию "Панкратов Мебель".
+<div class="text">
+Спасибо за качественную мебель на кухню. Стильный дизайн, мягкие тона, всё прошло гладко. Благодарю Панкратова Олега и всю компанию!
 </div>
-
-<div class="review-photos">
-<img src="kitchen7.jpg">
-</div>
+<img src="review4-photo.jpg" class="review-photo">
 </div>
 
 </section>
@@ -278,7 +238,3 @@ font-size:14px;
 
 </body>
 </html>
-
-
-
-
