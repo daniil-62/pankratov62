@@ -21,11 +21,11 @@ h1{
 }
 
 .container{
-    max-width:1400px;
+    max-width:1500px;
     margin:auto;
     padding:20px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
     gap:40px;
 }
 
@@ -33,13 +33,15 @@ h1{
     background:rgba(255,255,255,0.05);
     border-radius:20px;
     padding:25px;
-    box-shadow:0 0 25px rgba(255,180,0,0.2);
+    box-shadow:0 0 25px rgba(255,180,0,0.25);
     transition:0.4s;
+    display:flex;
+    flex-direction:column;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 40px rgba(255,180,0,0.5);
+    transform:translateY(-8px);
+    box-shadow:0 0 45px rgba(255,180,0,0.6);
 }
 
 .name{
@@ -62,12 +64,14 @@ h1{
 .card img{
     width:100%;
     border-radius:15px;
+    margin-top:auto;
     transition:0.4s;
 }
 
 .card img:hover{
-    transform:scale(1.05);
+    transform:scale(1.04);
 }
+
 footer{
     text-align:center;
     padding:40px;
@@ -90,7 +94,7 @@ footer{
 Всю мебель в квартиру заказывали у Олега! Отличное качество как самой мебели, так и сборки.
 Всем рекомендуем Панкратов мебель 👍
 </div>
-<img src="review1-photo.jpg" alt="">
+<img src="review1-photo.jpg">
 </div>
 
 <div class="card">
@@ -100,7 +104,7 @@ footer{
 Наконец-то дошли руки написать отзыв о нашей новой детской.
 Детскую привезли и установили в срок — дочь в восторге!
 </div>
-<img src="review2-photo.jpg" alt="">
+<img src="review2-photo.jpg">
 </div>
 
 <div class="card">
@@ -110,7 +114,7 @@ footer{
 Доверили кухню компании Олега Панкратова и не ошиблись.
 Всё красиво, аккуратно и качественно ❤️
 </div>
-<img src="review3-photo.jpg" alt="">
+<img src="review3-photo.jpg">
 </div>
 
 <div class="card">
@@ -120,7 +124,7 @@ footer{
 Спасибо за качественную мебель на кухню.
 Стильный современный дизайн и отличная сборка.
 </div>
-<img src="review4-photo.jpg" alt="">
+<img src="review4-photo.jpg">
 </div>
 
 </div>
